@@ -9,16 +9,64 @@
 #import <Foundation/Foundation.h>
 #import "Calibration.h"
 
-@interface Calibration ()
+@implementation Calibration
 
-@property (strong, nonatomic) NSDictionary* sensorConnectionLookup;
-@property (strong, nonatomic) NSTimer* dataUpdateTimer;
+@synthesize repsCount;
+@synthesize calibCounter;
+@synthesize calibProfileCounter;
+@synthesize repsStartBtn;
+@synthesize sensorData;
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [calibCounter beginCalibrationForNewExercise];
+}
+
+//---------------------------------------------------------------------------------------
+- (void)didReceiveMemoryWarning
+{
+    //release the view if it does not have a superview
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+ 
+}
+
+//----------------------------------------------------------------------------------------
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    //
+   
+}
+
+//------------------------------------------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------------------------------
+- (void)setCalibration
+{
+    
+}
+
+//-----------------------------------------------------------------------------------------
+
+- (void)calibrationResponse:(NSNotification *)unused
+{
+    //get the Calibration Data
+    WFWahooRawSensorConnection* rawData;
+    
+    
+    
+    
+}
+
 
 
 
 
 @end
-
-
-
-

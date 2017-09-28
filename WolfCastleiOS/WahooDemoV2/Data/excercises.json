@@ -1,0 +1,24 @@
+[
+  {
+    id: 'abdominalCrunches',
+    displayName: 'Abdominal Crunches',
+
+    configuration: {
+      axis: 2,
+      exerciseType: 2,
+      sensorOrientation: 0,
+      filterFrequency: 1,
+      cutoff: -20,
+      crossingsPerCount: 1,
+      asymmetric: false,
+      minRepetitionDuration: 90,
+      maxRepetitionDuration: 260,
+      minAccelerationRange: 20,
+      maxAccelerationRange: 160
+    },
+    calibration: [
+      '80020001ECFF015A0004011400A000',
+      '0102'
+    ]
+  }
+  ]
